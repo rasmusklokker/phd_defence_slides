@@ -1,0 +1,14 @@
+﻿Tables Study;Tables Level;Tables Туре;Tables Type of test;subject 1;subject 2;subject 3;subject 4;subject 5;relation 1;relation 2;relation 3;relation 4;relation 5;effect 1;effect 2;effect 3;effect 4
+Hanushek (1992);PE;I;Verbal skills;Reading;vocabulary;;;;+;0;;;;0;0;NA;NA
+Murnane and Phillips (1981);PE;I;Verbal skills;Vocabulary;;;;;0;;;;;0;NA;NA;NA
+Metzler and Woessmann (2012);PE;II;Test scores similar tests teachers and students;Math;reading;;;;+;0;;;;0.087;0;NA;NA
+Clotfelter et al. (2010);SE;II;Licensure test : Praxis II;General;math;English;biology;ELP;+;+;-;+;0;0.007;0.047; -0.022;0.016
+Kukla-Acevedo (2009);PE;II;Overall GPA, math GPA;Math;;;;;0;;;;;0.034;NA;NA;NA
+Boyd et al. (2008);PE/SE;II;Math, verbal SAT;Math;;;;;+, -;;;;;0.041;-0.033;NA;NA
+Clotfelter et al. (2007);PE;II;Elementary/early childhood education test;Math;reading;;;;+;+;;;;0.015;0.015;NA;NA
+Clotfelter et al. (2006);PE;II;Licensure test;Math;reading;;;;10;;;;;0.012;0;NA;NA
+Hill et al. (2005);PE;III;Subject knowledge test : math, reading;Math;;;;;0;;;;;0;NA;NA;NA
+Rowan et al. (1997);SE;III;Math quiz test score;Math;;;;;+;;;;;0.020;NA;NA;NA
+Mullens et al. (1996);PE;III;Math score end primary school;Math;;;;;+;;;;;0;NA;NA;NA
+Summers and Wolfe (1977);PE;III;National Teacher Exam Score;General;;;;;;;;;;0;NA;NA;NA
+Coenen et al. (2014);PE;II;Tracking based on test at age 12;Math;reading;;;;+;0;;;;0.198;0;NA;NA

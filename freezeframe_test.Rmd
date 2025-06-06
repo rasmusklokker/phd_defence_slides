@@ -1,0 +1,547 @@
+---
+title: "FreezeFrame<br>.gray[for xaringan]"
+pagetitle: "&#x23F8;&#xFE0F; FreezeFrame | xaringanExtra"
+subtitle: ".big[&#x23F8;&#xFE0F;]"
+author: "<a href='https://www.garrickadenbuie.com/'>Garrick Aden-Buie<a>"
+date: 'xaringanExtra'
+output:
+  xaringan::moon_reader:
+    css: [robot-fonts, robot]
+    lib_dir: libs
+---
+
+
+```{css, echo = FALSE}
+caption {
+      font-size: 1.0em;
+    }
+    
+p.caption {
+  font-size: 0.6em;
+}
+
+.remark-slide-content.full-slide-fig{
+  padding: 0px 0px 0px 0px;
+  width: 100%;}
+  
+.title-slide {
+  color: #000000;
+   background-image:url(vive_noback_2.jpg),url(ku_logo_uk_hh.png), url(anim_1.gif);
+  background-position:2% 98% ,2% 2%, 100% 0%;
+  background-size: 200px,200px,600px;
+  background-color: #000000;
+  padding-left: 0px,0px;  /* delete this for 4:3 aspect ratio */
+}
+
+.title-slide h1 {
+  color:               white;
+  text-shadow: none;
+   padding-right: 500px;
+
+}
+
+.title-slide h2 {
+  color:               white;
+  text-shadow: none;
+   padding-right: 500px;
+
+}
+
+.title-slide h3 {
+  color:               white;
+  text-shadow: none;
+   padding-right: 500px;
+
+}
+
+
+
+
+.center2 {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.remark-slide-content.full-slide-fig{
+  padding: 0px 0px 0px 0px;
+  width: 100%;}
+
+
+.pull-right ~ * { clear: unset; }
+.pull-right + * { clear: both; }
+
+.left-column {
+  width: 50%;
+  float: right;
+  padding-top: 1em;
+}
+
+.right-column {
+  width: 50%;
+  float: right;
+  padding-top: 1em;
+}
+    
+```
+
+
+```{r xaringan-panelset, echo=FALSE, message=FALSE}
+options(htmltools.dir.version = FALSE)
+xaringanExtra:::use_freezeframe()
+
+library(dplyr)
+
+```
+
+class: center middle
+
+![](two_tch_dyn_res.gif)
+
+---
+class: center middle
+
+.w-75.h-center[
+![](race_bar_rand.gif)
+]
+
+
+---
+
+
+
+
+```{tikz wis-model, fig.cap = "Funky tikz", fig.ext = 'png', fig.width=18, echo=FALSE}
+
+\begin{tikzpicture}[scale=15]
+\node (v0) at (0.0875,-0.308) {parent SES};
+\node[text=white] (v1) at (0.178,-0.0509) {neighborhood};
+\node[text=white] (v2) at (0.254,-0.191) {school quality};
+\node[align=left, text=white] (v3) at (0.400,-0.0464) {school\\attractiveness};
+\node (v0) at (0.0875,-0.308) {parent SES};
+\node[align=left] (v4) at (0.660,-0.308) {Educational\\attainment};
+\node[align=left] (v5) at (0.908,-0.308) {Occupational\\attainment};
+\node (v6) at (0.0345,-0.653) {mental ability};
+\node[align=left] (v7) at (0.253,-0.655) {Academic achievement\\high school};
+\node[align=left] (v8) at (0.446,-0.308) {significant other\\influence};
+\node[align=left] (v9) at (0.614,-0.497) {Educational\\aspiration};
+\node[align=left] (v10) at (0.614,-0.119) {Occupational\\aspiration};
+\draw[fill=none, dashed, color=white](0.26,-.09) circle (.22) node [black,yshift=-.1cm] {};
+\draw [->] (v4) edge (v5);
+\draw [->,<-] (v0) .. controls (0.0315,-0.351) and (0.0139,-0.466) .. (v6);
+\draw [->] (v6) edge (v7);
+\draw [->] (v0) edge (v7);
+\draw [->] (v7) edge (v8);
+\draw [->] (v0) edge (v8);
+\draw [->] (v8) edge (v9);
+\draw [->] (v8) edge (v10);
+\draw [->] (v10) edge (v5);
+\draw [->] (v9) edge (v4);
+\draw [->] (v8) edge (v4);
+\end{tikzpicture}
+
+
+
+```
+
+---
+
+
+
+
+```{tikz wis-model-exp, fig.cap = "Funky tikz 2", fig.ext = 'png', fig.width=18, echo=FALSE}
+
+\begin{tikzpicture}[scale=15]
+\node (v0) at (0.0875,-0.308) {parent SES};
+\node (v1) at (0.178,-0.0509) {neighborhood};
+\node (v2) at (0.254,-0.191) {school quality};
+\node[align=left] (v3) at (0.400,-0.0464) {school\\attractiveness};
+\node[align=left] (v4) at (0.660,-0.308) {Educational\\attainment};
+\node[align=left] (v5) at (0.908,-0.308) {Occupational\\attainment};
+\node (v6) at (0.0345,-0.653) {mental ability};
+\node[align=left] (v7) at (0.253,-0.655) {Academic achievement\\high school};
+\node[align=left] (v8) at (0.446,-0.308) {significant other\\influence};
+\node[align=left] (v9) at (0.614,-0.497) {Educational\\aspiration};
+\node[align=left] (v10) at (0.614,-0.119) {Occupational\\aspiration};
+\draw[fill=none, dashed](0.26,-.09) circle (.22) node [black,yshift=-.1cm] {};
+\draw [->] (v3) edge (v2);
+\draw [->] (v1) edge (v3);
+\draw [->] (v1) edge (v2);
+\draw [->] (v4) edge (v5);
+\draw [->,<-] (v0) .. controls (0.0315,-0.351) and (0.0139,-0.466) .. (v6);
+\draw [->] (v6) edge (v7);
+\draw [->] (v0) edge (v7);
+\draw [->] (v7) edge (v8);
+\draw [->] (v0) edge (v8);
+\draw [->] (v2) edge (v7);
+\draw [->] (v8) edge (v9);
+\draw [->] (v8) edge (v10);
+\draw [->] (v10) edge (v5);
+\draw [->] (v9) edge (v4);
+\draw [->] (v8) edge (v4);
+\draw [->,<-] (v1) .. controls (0.0663,-0.0607) and (0.0363,-0.146) .. (v0);
+\end{tikzpicture}
+
+
+
+```
+
+
+---
+
+
+
+```{r vam-gpa-lit, echo=FALSE, include=FALSE}
+
+vam_gpa_tab <- read.csv("C:\\Users\\b059064\\Desktop\\PHD\\papers\\full dissertation\\defence\\vam_gpa_tab.csv", sep=";")
+
+names(vam_gpa_tab) <- gsub("\\.", "_", names(vam_gpa_tab))
+
+vam_gpa_tab <- vam_gpa_tab[-grep("relation", names(vam_gpa_tab) )]
+
+
+vam_gpa_tab_long_subj <- reshape2::melt(vam_gpa_tab, id.vars=c("Tables_Study", "Tables_Level", "Tables_Туре", "Tables_Type_of_test"),
+                                   measure.vars = paste("subject", 1:4, sep="_"))
+
+
+vam_gpa_tab_long_eff <- reshape2::melt(vam_gpa_tab, id.vars=c("Tables_Study", "Tables_Level", "Tables_Туре", "Tables_Type_of_test"),
+                                   measure.vars = paste("effect", 1:4, sep="_"))
+
+names(vam_gpa_tab_long_eff)[ncol(vam_gpa_tab_long_eff)] <- "eff"
+
+vam_gpa_tab_long_subj <- cbind(vam_gpa_tab_long_subj, vam_gpa_tab_long_eff[c("eff")])
+
+vam_gpa_tab_long_subj$value <- tolower(vam_gpa_tab_long_subj$value )
+
+vam_gpa_tab_long_subj$value <-  ifelse(!vam_gpa_tab_long_subj$value %in% c("math", "reading"), "other subjects", vam_gpa_tab_long_subj$value )
+
+vam_gpa_tab_long_subj$alpha <- ifelse(vam_gpa_tab_long_subj$eff==0, 0,1)
+
+vam_gpa_tab_long_subj$eff_2 <- ifelse(vam_gpa_tab_long_subj$eff==0, "NS",vam_gpa_tab_long_subj$eff)
+
+
+vam_gpa_tab_long_subj <- vam_gpa_tab_long_subj[order(vam_gpa_tab_long_subj$value, -vam_gpa_tab_long_subj$eff),]
+
+
+
+vam_gpa_tab_long_subj$mean_eff <- ave(vam_gpa_tab_long_subj$eff, list(vam_gpa_tab_long_subj$value), FUN=function(x){
+  
+  x <- x[x!=0]
+  
+  mean(x, na.rm=TRUE)
+})
+
+library (kableExtra)
+
+# vam_gpa_tab_long_subj <- vam_gpa_tab_long_subj[!is.na(vam_gpa_tab_long_subj$eff)&!vam_gpa_tab_long_subj$value=="other subjects",
+#                              c("value", "Tables_Study", "eff_2", "mean_eff")]
+
+vam_gpa_tab_long_subj <- vam_gpa_tab_long_subj[!is.na(vam_gpa_tab_long_subj$eff),
+                             c("value", "Tables_Study", "eff_2", "mean_eff")]
+
+
+names(vam_gpa_tab_long_subj) <- c("Subject", "Study", "Effect size", "Avg. effect")
+
+
+ 
+ vec <- vam_gpa_tab_long_subj %>% 
+   filter(Subject!="other subjects") %>% 
+   select(Subject)
+ 
+row <-  min(which(vec=="reading"))-1
+   
+   
+
+ gpa_kab <- kable(vam_gpa_tab_long_subj[vam_gpa_tab_long_subj$Subject!="other subjects",], row.names = FALSE, digits=2, caption="Association between teacher licensure test scores and teacher effectiveness",
+                  booktabs=TRUE) %>%
+   kable_classic(full_width = F, html_font = "serif", font_size = 12) %>%
+    row_spec(row, extra_css = "border-bottom: 2px solid black;") %>% 
+   column_spec(column = c(1,4), extra_css = "border-bottom: none;") %>% 
+  collapse_rows(columns = c(1,4)) 
+
+
+ 
+
+
+
+
+
+
+
+vam_exp_tab <- read.csv("C:\\Users\\b059064\\Desktop\\PHD\\papers\\full dissertation\\defence\\vam_exp_tab.csv", sep=";")
+
+
+names(vam_exp_tab) <- gsub("\\.", "_", names(vam_exp_tab))
+
+vam_exp_tab <- vam_exp_tab[-grep("relation", names(vam_exp_tab) )]
+
+vam_exp_tab$Tables_Туре
+
+vam_exp_tab_long_subj <- reshape2::melt(vam_exp_tab, id.vars=c("Tables_Study", "Tables_Level", "Tables_Type", "Tables_Experience"),
+                                   measure.vars = paste("subjects", 1:4, sep="_"))
+
+
+vam_exp_tab_long_eff <- reshape2::melt(vam_exp_tab, id.vars=c("Tables_Study", "Tables_Level", "Tables_Type", "Tables_Experience"),
+                                   measure.vars = paste("eff", 1:4, sep="_"))
+
+names(vam_exp_tab_long_eff)[ncol(vam_exp_tab_long_eff)] <- "eff"
+
+vam_exp_tab_long_subj <- cbind(vam_exp_tab_long_subj, vam_exp_tab_long_eff[c("eff")])
+
+vam_exp_tab_long_subj$eff <- as.numeric(vam_exp_tab_long_subj$eff)
+
+
+
+
+vam_exp_tab_long_subj$value <- tolower(vam_exp_tab_long_subj$value )
+
+vam_exp_tab_long_subj$value <-  ifelse(!vam_exp_tab_long_subj$value %in% c("math", "reading"), "other subjects", vam_exp_tab_long_subj$value )
+
+vam_exp_tab_long_subj$alpha <- ifelse(vam_exp_tab_long_subj$eff==0, 0,1)
+
+vam_exp_tab_long_subj$eff_2 <- ifelse(vam_exp_tab_long_subj$eff==0, "NS",vam_exp_tab_long_subj$eff)
+
+
+vam_exp_tab_long_subj <- vam_exp_tab_long_subj[order(vam_exp_tab_long_subj$value, -vam_exp_tab_long_subj$eff),]
+
+
+
+
+
+vam_exp_tab_long_subj$mean_eff <- ave(vam_exp_tab_long_subj$eff, list(vam_exp_tab_long_subj$value), FUN=function(x){
+  
+   x <- x[x!=0]
+  
+  mean(x, na.rm=TRUE)
+})
+
+
+
+
+# vam_exp_tab_long_subj <- vam_exp_tab_long_subj[!is.na(vam_exp_tab_long_subj$eff)&!vam_exp_tab_long_subj$value=="other subjects",
+#                              c("value", "Tables_Study", "eff_2", "mean_eff")]
+
+vam_exp_tab_long_subj <- vam_exp_tab_long_subj[!is.na(vam_exp_tab_long_subj$eff),
+                             c("value", "Tables_Study", "eff_2", "mean_eff")]
+
+
+names(vam_exp_tab_long_subj) <- c("Subject", "Study", "Effect size", "Avg. effect")
+
+ vec <- vam_exp_tab_long_subj %>% 
+   filter(Subject!="other subjects") %>% 
+   select(Subject)
+ 
+row <-  min(which(vec=="reading"))-1
+
+ exp_kab <- kable(vam_exp_tab_long_subj[vam_exp_tab_long_subj$Subject!="other subjects",], row.names = FALSE, digits=2, caption="Association between experience and teacher effectiveness",
+                  booktabs=TRUE) %>%
+   kable_classic(full_width = F, html_font = "serif", font_size = 12) %>%
+   row_spec(row, extra_css = "border-bottom: 2px solid black;") %>% 
+   column_spec(column = c(1,4), extra_css = "border-bottom: none;") %>% 
+  collapse_rows(columns = c(1,4))
+
+ 
+
+
+ 
+ 
+ common_stud <- intersect(vam_exp_tab_long_subj$Study, vam_gpa_tab_long_subj$Study)
+ 
+ vam_exp_tab_long_subj$common_stud <- vam_exp_tab_long_subj$Study %in% common_stud
+ 
+ vam_exp_tab_long_subj$mean_eff_common <- ave(as.numeric(vam_exp_tab_long_subj$`Effect size`), list(vam_exp_tab_long_subj$Subject, vam_exp_tab_long_subj$common_stud), FUN=function(x){
+  
+  x <- x[x!=0]
+  
+  mean(x, na.rm=TRUE)
+})
+ 
+ 
+  vam_gpa_tab_long_subj$common_stud <- vam_gpa_tab_long_subj$Study %in% common_stud
+
+  vam_gpa_tab_long_subj$mean_eff_common <- ave(as.numeric(vam_gpa_tab_long_subj$`Effect size`), list(vam_gpa_tab_long_subj$Subject, vam_gpa_tab_long_subj$common_stud), FUN=function(x){
+  
+  x <- x[x!=0]
+  
+  mean(x, na.rm=TRUE)
+})
+ 
+
+
+ vam_exp_tab_long_subj <- vam_exp_tab_long_subj[order(vam_exp_tab_long_subj$Subject,vam_exp_tab_long_subj$Study),]
+ 
+vam_exp_tab_long_subj <- vam_exp_tab_long_subj[order(vam_exp_tab_long_subj$Subject,vam_exp_tab_long_subj$Study),]
+
+
+ exp_kab_common <- kable(vam_exp_tab_long_subj[vam_exp_tab_long_subj$Study %in% common_stud,c(1:3,6)], row.names = FALSE, digits=2, caption="Association between experience and teacher effectiveness",
+                  booktabs=TRUE, col.names = c("Subject", "Study", "Effect size", "Avg. effect")) %>% 
+   kable_classic(full_width = F, html_font = "serif", font_size = 12) %>% 
+  collapse_rows(columns = c(1,4))
+ 
+  gpa_kab_common <- kable(vam_gpa_tab_long_subj[vam_gpa_tab_long_subj$Study %in% common_stud,c(1:3,6)], row.names = FALSE, digits=2, caption="Association between teacher licensure test scores and teacher effectiveness",
+                  booktabs=TRUE, col.names = c("Subject", "Study", "Effect size", "Avg. effect")) %>% 
+   kable_classic(full_width = F, html_font = "serif", font_size = 12) %>% 
+  collapse_rows(columns = c(1,4))
+  
+
+ 
+```
+
+
+
+.right-column[
+
+```{r exp-tab, echo=FALSE}
+
+exp_kab
+
+```
+
+
+]
+
+.left-column[
+
+
+```{r gpa-tab, echo=FALSE}
+
+gpa_kab
+
+
+```
+
+
+]
+
+
+Results in tables adapted from Coenen et al, 2018
+
+---
+
+.pull-left[
+
+```{r gpa-tab-2, echo=FALSE}
+
+row <- min(which(vam_exp_tab_long_subj$Subject=="reading"))-1
+
+# gpa_kab %>%
+#   row_spec(row, extra_css = "border-bottom: 2px solid black;")
+
+
+```
+
+]
+
+---
+class: center middle
+
+.h-center[
+![](https://media.giphy.com/media/K5QYsbHL2pzBFRo1cj/giphy.gif)
+]
+
+---
+class: center middle big-text
+
+Did you notice
+
+--
+
+each slide has
+
+--
+
+perfect timing?
+
+
+---
+class: center middle
+
+.h-center[
+![](https://media.giphy.com/media/GS8rAgUNI35uw/giphy.gif)
+]
+
+---
+class: center middle
+
+.w-45.h-center[
+![](https://media.giphy.com/media/JoDT2WaykzFnN9vJqL/giphy.gif)
+]
+
+---
+class: center middle
+
+.h-center[
+![](https://media.giphy.com/media/11StaZ9Lj74oCY/giphy.gif)
+]
+
+---
+class: center middle big-text
+
+Try going back
+
+&#x1F448;
+
+---
+
+# Use _freezeframe_
+
+Drop this into your slides:
+
+````
+```{r xaringanExtra-freezeframe, echo=FALSE}`r ''`
+xaringanExtra::use_freezeframe()
+```
+````
+
+--
+
+1. Gifs start when you enter a slide.
+
+--
+
+2. They stop when you exit (but you can't see that).
+
+--
+
+3. You can start or stop the gif with a click.
+
+---
+class: center middle
+
+.h-center[
+![](https://media.giphy.com/media/IcGkqdUmYLFGE/giphy.gif)
+]
+
+---
+layout: false
+class: center middle
+
+<img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="25%" alt="GitHub Octocat Logo" />
+
+### [gadenbuie/xaringanExtra](https://github.com/gadenbuie/xaringanExtra)
+
+
+```{css echo=FALSE}
+.gray {
+  color: #888;
+}
+.big-text p {
+  font-size: 4em;
+  line-height: 0.3;
+}
+.h-center {
+  margin: 0 auto;
+}
+.w-45 {
+  width: 45%;
+}
+.w-75 {
+  width: 75%;
+}
+.w-100 {
+  width: 100%;
+}
+```
