@@ -4,14 +4,11 @@
     <title>Teachers on the move</title>
     <meta charset="utf-8" />
     <meta name="author" content="Rasmus H. Klokker" />
+    <meta name="date" content="2025-10-06" />
     <script src="libs/header-attrs/header-attrs.js"></script>
-    <link href="libs/remark-css/default.css" rel="stylesheet" />
-    <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
-    <script src="libs/freezeframe/freezeframe.min.js"></script>
-    <script src="libs/xaringanExtra-freezeframe/freezeframe-init.js"></script>
-    <script id="xaringanExtra-freezeframe-options" type="application/json">{"selector":"img[src$=\"gif\"]","trigger":"click","overlay":false,"responsive":true,"warnings":true}</script>
     <script src="libs/kePrint/kePrint.js"></script>
     <link href="libs/lightable/lightable.css" rel="stylesheet" />
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
@@ -26,11 +23,8 @@ class: center, middle, inverse, title-slide
 .author[
 ### Rasmus H. Klokker
 ]
-.institute[
-### VIVE
-]
 .date[
-### 22/08/2024 (updated: 2025-06-06)
+### 10/06/2025
 ]
 
 ---
@@ -51,9 +45,9 @@ p.caption {
   
 .title-slide {
   color: #000000;
-   background-image:url(vive_noback_2.jpg),url(ku_logo_uk_hh.png), url(anim_conv.gif);
+   background-image:url(vive_noback_2.jpg),url(ku_logo_uk_hh.png), url(anim_1.gif);
   background-position:2% 98% ,2% 2%, 100% 0%;
-  background-size: 200px,200px,600px;
+  background-size: 200px,150px,600px;
   background-color: #000000;
   padding-left: 0px,0px;  /* delete this for 4:3 aspect ratio */
 }
@@ -62,6 +56,7 @@ p.caption {
   color:               white;
   text-shadow: none;
    padding-right: 500px;
+  font-size: 70px;
 
 }
 
@@ -107,6 +102,23 @@ p.caption {
   float: right;
   padding-top: 1em;
 }
+
+.left-column3 {
+  width: 20%;
+  float: left;
+  padding-top: 1em;
+}
+
+.right-column3 {
+  width: 80%;
+  float: right;
+  padding-top: 1em;
+}
+    
+    
+.kable_wrapper &gt; tbody &gt; tr &gt; td {
+    vertical-align: top;
+}
     
     
 &lt;/style&gt;
@@ -114,7 +126,6 @@ p.caption {
 
 
 
----
 
 # What is teacher sorting and why is it important?
 
@@ -123,69 +134,79 @@ p.caption {
 
 .center2[
 
-Lets imagine the following scenario
+Let's imagine the following scenario
 
 ]
 
+
+
+
 ---
+
+class: center middle
+
 
 # Two types of teachers
 
 
-&lt;img src="two_teach_plot.png" width="2891" height="480px" /&gt;
+&lt;img src="two_teach_plot.png" width="973px" height="550px" /&gt;
 
 
 ---
+
+class: center middle
+
 
 #Two types of teachers and three types of schools
 
 
-&lt;img src="tch_schl_plot_1.png" width="2891" height="480px" /&gt;
+&lt;img src="tch_schl_plot_1.png" width="973px" height="550px" /&gt;
 
 
 ---
+
+class: center middle
+
 
 #Two types of teachers and three types of schools
 
 
-&lt;img src="tch_schl_plot_2.png" width="2891" height="480px" /&gt;
+&lt;img src="tch_schl_plot_2.png" width="973px" height="550px" /&gt;
 
 
 
 
 ---
+
+class: center middle
+
 
 #Two types of teachers and three types of schools
 
 
 
-&lt;img src="tch_schl_plot_3.png" width="2891" height="480px" /&gt;
+&lt;img src="tch_schl_plot_3.png" width="973px" height="550px" /&gt;
 
 
 ---
 
-# Teachers go to work
+class: center middle
 
 
+# Teachers go to work in three types of schools
 
----
 
-&lt;!-- ![](two_tch_dyn_res.gif) --&gt;
-
- &lt;!--&lt;center&gt;!--&gt;
- &lt;!--&lt;img src="two_tch_dyn_res.gif"&gt;!--&gt;
- &lt;!--&lt;/center&gt;!--&gt;
-
----
-
-&lt;video width="1300" height="550" autoplay&gt;
-  &lt;source src="two_tch_dyn_res.mp4" type="video/mp4"&gt;
+&lt;video width="973" height="550" autoplay&gt;
+  &lt;source src="two-tch-dyn-res.mp4" type="video/mp4"&gt;
   Your browser does not support the video tag.
 &lt;/video&gt;
 
+
+
+
+
+
 ---
-
-
 
 # Let's try that with alot of teachers
 
@@ -193,11 +214,11 @@ And let's do a race!
 
 --
 
-Which kind of school ends up with the most skilled teachers?
+Which kind of school end up with the most skilled teachers?
 
 ---
 
-# What happens if nothing matters?
+# What happens if neither teacher nor school characteristics matter?
 
 
 
@@ -210,9 +231,10 @@ Which kind of school ends up with the most skilled teachers?
 
 ---
 
-&lt;!-- &lt;iframe width="1000" height="500" src="race_bar_rand.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt; --&gt;
+class: center middle
 
-&lt;video width="1300" height="550" autoplay&gt;
+
+&lt;video width="1150" height="650" autoplay&gt;
   &lt;source src="race_bar_rand.mp4" type="video/mp4"&gt;
   Your browser does not support the video tag.
 &lt;/video&gt;
@@ -222,7 +244,7 @@ Which kind of school ends up with the most skilled teachers?
 
 ---
 
-# what happens if teachers' skill and school characteristics matter?
+# What happens if teachers' skill and school characteristics matter?
 
 
 
@@ -234,13 +256,20 @@ Which kind of school ends up with the most skilled teachers?
 
 ---
 
-&lt;video width="1300" height="550" autoplay&gt;
+class: center middle
+
+
+&lt;video width="1150" height="650" autoplay&gt;
   &lt;source src="race_bar_model.mp4" type="video/mp4"&gt;
   Your browser does not support the video tag.
 &lt;/video&gt;
 
 
 
+
+???
+
+THIS is teacher sorting! One might define teacher sorting more generally as the phenomenon of teacher with certain characteristics, e.g. age, experience, a taste for ramen soup, being more likely to work in schools with a certain set of characteristics, e.g. schools with more students that have high levels of academic achievement or schools that serve ramen soup. However in my dissertation, and here, teacher sorting refers to the phenomenon that skilled teachers are more likely to work in schools that serve students that are predisposed for having high levels of academic performance, which are represented here by schools serving high-SES students. The consequence, the "smoking gun", of teacher sorting is the distribution of skilled teachers among schools serving students with different levels of SES, represented by the bar chart in the figure. 
 ---
 
 
@@ -251,9 +280,13 @@ Which kind of school ends up with the most skilled teachers?
 
 We need two pieces of information
 
-1) The gap in academic performance between the bottom 25% and the upper 25% on an index of socio-economic status(SES) is 0.9 standard deviations, or about 3 years of learning(Hanushek, 2022)
+**The gap in academic performance between students with low- and high-SES backgrounds**
 
-2) The difference in growth of academic performance between an averagely skilled teacher and a highly skilled teacher is about 0.2 standard deviations(Jackson,2014)
+1) The gap in academic performance between students with the lowest 25% of SES and students with the highest 25% SES is 0.9 standard deviations, or about 3 years of learning(Hanushek, 2022)
+
+**The impact of academic performance of being taught by a skilled teacher**
+
+2) Being taught by a higly skilled teacher leads to 0.2 SD more growth in students' academic performance compared to being taught by an averagely skilled teacher(Jackson,2014)
 
 
 
@@ -265,7 +298,7 @@ We need two pieces of information
 
 .right-column[
 
-&lt;img src="defence_slides_test_2_files/figure-html/gap-plot-base-1.png" height="480px" /&gt;
+&lt;img src="defence_slides_test_2_files/figure-html/gap-plot-base-1.svg" width="1300px" height="650px" /&gt;
 
 ]
 
@@ -284,7 +317,7 @@ We need two pieces of information
 
 
 
-&lt;img src="defence_slides_test_2_files/figure-html/gap-plot-1.png" height="480px" /&gt;
+&lt;img src="defence_slides_test_2_files/figure-html/gap-plot-1.svg" width="1300px" height="650px" /&gt;
 
 
 
@@ -298,7 +331,7 @@ but if teacher sorting persists, schools will end up worsening educational inequ
 ---
 
 
-# What do we know already, and what don't we know?
+# What do we know already and what don't we know?
 
 - The literature generally shows that teachers are unequally distributed across schools
 
@@ -313,20 +346,18 @@ level achievement(Hanushek et al., 2015; Ingersoll and May, 2012)
 
 - Higher proportions of ethnic minority pupils(Allen et al., 2018; Carroll et al., 2000; Falch and Strøm, 2004; Feng, 2014; Hanushek et al., 2015; Shen, 1997)
 
-- Higher proportions of ethnic minority pupils(Allen et al., 2018; Carroll et al., 2000; Falch and Strøm, 2004; Feng, 2014; Hanushek et al., 2015; Shen, 1997)
-
 - Higher shares of inexperienced teachers, discipline problems, and inadequate support from the
 administration(Ingersoll, 2007a; Shen, 1997)
 
 ---
 
-# What do we know already, and what don't we know?
+# What do we know already and what don't we know?
 
-## However
+**However**
 
 - Most of what we know derives from studies in the US.
 
-- Most studies do not identify causal effects(and if they do, most concern financial factors, e.g. salary)
+- Most studies do not identify causal effects(and if they do, most concern financial factors, e.g. teachers' salary)
 
 
 
@@ -337,11 +368,11 @@ WE don't know alot about teacher sorting outside the US, so we don't know much a
 
 ---
 
-# overview of papers
+# Overview of papers
 
 
 
-&lt;img src="papers_complement_fig.png" width="1733" height="525px" /&gt;
+&lt;img src="papers_complement_fig.png" width="1300px" height="525px" /&gt;
 
 &lt;!-- ![](C:\\Users\\b059064\\Desktop\\PHD\\papers\\mantle\\papers_complement_fig.pdf){width=70%} --&gt;
 
@@ -360,9 +391,9 @@ WE don't know alot about teacher sorting outside the US, so we don't know much a
 
 --
 
-In this paper i investigate
+In this paper, i investigate
 
-1) How do teacher career choices, across teachers' career, fall within different types of schools or opting out of teaching
+1) How do teacher career choices, across teachers' career, fall within different types of schools or opting out of teaching?
 
 2) How can the overall distribution of teacher career paths be segmented into distinct types of career paths?
 
@@ -370,69 +401,87 @@ In this paper i investigate
 
 ---
 
-# Paper 1 - data &amp; mehtods
+# Paper 1 - Data &amp; mehtods
 
 ### Data
 
 - Danish administrative data covering 1980 to 2020: 
-  - All primary school teachers
-  - Students and their parents in primary school 
+  - All teacher graduates that graduated in the years 1980-1985
+  - All primary school students and their parents
   - Teachers and students linked at the school level
   
 
 ### Methods
 
-- sequence analysis
+- Sequence analysis
 
 - Schools are categorized into 4 types of schools, based on the SES composition of students at schools
 
 - Use cluster analysis to segment teacher careers into different types of career
 
-
----
-
-# Paper 1 - Results
-
-So many not in public primary schools!! 
-
-&lt;div class="figure"&gt;
-&lt;img src="defence_slides_test_2_files/figure-html/overall-seq-plot-1.png" alt="overall distribution of sequences" height="400px" /&gt;
-&lt;p class="caption"&gt;overall distribution of sequences&lt;/p&gt;
-&lt;/div&gt;
-
----
-# Paper 1 - Results
-
-4 types of career paths
+- Use machine learning to investigate if teacher characteristics predict cluster membership
 
 
-&lt;div class="figure"&gt;
-&lt;img src="defence_slides_test_2_files/figure-html/cluster-seq-plot-1.png" alt="distribution of sequences across clusters" height="400px" /&gt;
-&lt;p class="caption"&gt;distribution of sequences across clusters&lt;/p&gt;
-&lt;/div&gt;
+???
+
+SES composition is based on parental education and income, proportion of students that enroll in secondary education, proportion of ethnic minority students. 
 
 
 ---
 
 # Paper 1 - Results
 
-## Can teacher characteristics predict the type of career path?
+The percentage of teacher graduates not working in public primary schools is 65% first year after graduation and never drops below 49%!
+
+&lt;img src="defence_slides_test_2_files/figure-html/overall-seq-plot-1.svg" width="1300px" height="550px" /&gt;
+
+
+---
+# Paper 1 - Results
+
+ - Cluster analysis suggests teachers' career paths can be segmented into 4 types of career paths.
+ 
+ - While the 4 types of career paths differ with regards to the types of schools that are the most prevalent, they show a similar absence of dynamics.
+ 
+- Do different kinds of teachers take different career paths?...
+
+
+&lt;img src="defence_slides_test_2_files/figure-html/cluster-seq-plot-1.svg" width="1300px" height="500px" /&gt;
+
+
+??? 
+
+These results show that some teacher mainly teach students from high-SES background while some teacher mainly teach students from low-SES backgrounds. However we don't know if teachers also differ with respect to their characteristics. For instance, if teachers with high cognitive abilities also teach students from high-SES backgrounds, this would indicate that teacher sorting exists on a career level. More concretely, we'd like to know, if teacher with higher cognitive abilty have a hgiher probability of belonging cluster 3
+
+---
+
+# Paper 1 - Results
+
+**Can teacher characteristics predict the type of career path?**
 
 Teacher characteristics are very poor predictors of the type of career path
 
 
 
-Table: Importance of teacher characteristics
 
-|Variable                        | Importance|
-|:-------------------------------|----------:|
-|Municipality type               |       3.91|
-|Teacher high-school GPA         |       0.40|
-|Age at graduation               |       0.31|
-|Gender                          |       0.25|
-|Number of children in household |       0.28|
-|Marital status                  |       0.00|
-|Year of graduation              |       0.01|
+
+
+
+&lt;img src="defence_slides_test_2_files/figure-html/pdp-plots-1.svg" width="1300px" height="550px" /&gt;
+
+---
+
+
+# Paper 1 - Results
+
+**were the 80's just an exception?**
+
+- The percentage of teacher graduates not working in public primary schools has changed in later years, but even in 2005-2010 34% of teachers started out not working in public primary schools, and the number never gets lower than 29% at any time. 
+
+- In 2005-2010 the trend has reversed, teachers start leaving public primary schools instead of opting in.
+
+&lt;img src="defence_slides_test_2_files/figure-html/overall-seq-plot_cohort-1.svg" width="1300px" height="500px" /&gt;
+
 
 
 
@@ -446,16 +495,19 @@ Table: Importance of teacher characteristics
 
 - The overall pattern of teacher career paths can be divided into 4 different types of teacher career paths
 
-- Teacher characteristics offer very little predictive power in terms of predicting which types of career paths teachers choose.
+- Teacher characteristics are poor predictors in terms of which type of career paths teachers choose
 
-- EXTRA: sequences of first 10 years across cohorts
+
+???
+
+It is surprising that teacher characteristics have so little predictive power wrt to teacher career paths. However, it may not not be so weird that (static) characteristics of teacher at the time of graduation are not very predictive of the _entire_ career path of teachers. For instance, teachers are likely to form a family and settle _during_ their career and not already be settled at the time of graduation. If we want to assess the impact of teacher characteristics on teachers' career choices in a more dynamic way.......
 
 
 ---
 
 .center2[
 
-Would be nice to look at transitions one by one, instead of entire sequence...
+Now it would be nice to look at transitions one by one, instead of entire sequence...
 
 ]
 
@@ -465,8 +517,9 @@ Would be nice to look at transitions one by one, instead of entire sequence...
 
 # Paper 2 - Introduction
 
+- Joint work with Nicolai Kristensen
 
-- In contrast to paper 1, the main goal to model, rather than describe, how teachers transition between different types of employment. 
+- In contrast to paper 1, the main goal to model, rather than describe, how teachers transition between different types schools, as well other types of employment. 
 
 - We model the career choices of teachers using a structural dynamic modelling approach. 
 
@@ -474,7 +527,7 @@ Would be nice to look at transitions one by one, instead of entire sequence...
 
 # Paper 2 - Data
 
-- We use danish administrative data on all teacher graduates in the years 2008-2022 and link these to workplaces on a bi-annual basis. Workplaces are linked to schools 
+- We use Danish administrative data on all teacher graduates in the years 2008-2022 and link these to workplaces on a bi-annual basis. Workplace identifiers are linked to schools 
 
 
 - We use teachers college GPA as indication of teachers' skill.
@@ -488,6 +541,11 @@ Would be nice to look at transitions one by one, instead of entire sequence...
     - Other Teaching
     - Not Teacher
     - Out
+    
+    
+???
+
+"Out" represents teacher graduates that are unemployed or unobserved in the first 10 periods
 
 
 
@@ -495,13 +553,20 @@ Would be nice to look at transitions one by one, instead of entire sequence...
 
 # Paper 2 - Results
 
-
-
 - Some of the main results you have seen already
+
+
+&lt;!-- ![](race_bar_model_loop.gif){width=354, height=200} --&gt;
+
+&lt;img src="race_bar_model_loop.gif" width="531px" height="300px" /&gt;
 
 --
 
 - Our model suggests that teachers with higher college GPA are more likely to work in schools serving students in which parents have the 25% longest educations, and vice versa for teachers with lower college GPA
+
+???
+
+This is the opposite of what i find in Paper 1. Two differences: 1) We use college GPA, not HS GPA and 2) We use a dynamic approach and allow GPA to have a different impact across stages in teachers' career
 
 --
 
@@ -515,20 +580,20 @@ Would be nice to look at transitions one by one, instead of entire sequence...
 
 - Teachers are sorted already from the beginning!
 
-&lt;img src="defence_slides_test_2_files/figure-html/sort-perc-public-1.png" width="100%" height="450px" /&gt;
+&lt;img src="defence_slides_test_2_files/figure-html/sort-perc-public-1.svg" width="1300px" height="500px" /&gt;
 
 ---
 
 # Paper 2 - Results
 
-- What if teachers were obligated to work in public primary schools in the first 2 years after graduation?
+**What if teachers were obligated to work in public primary schools in the first 2 years after graduation?**
 
 - This has a permanent impact on subsequent choices, but improvement is lowest in the low SES public school and "out" group grows
 
 
 
 
-&lt;img src="defence_slides_test_2_files/figure-html/sim-dist-1.png" width="100%" height="400px" /&gt;
+&lt;img src="defence_slides_test_2_files/figure-html/sim-dist-1.svg" width="1300px" height="475px" /&gt;
 
 
 ??? 
@@ -537,25 +602,27 @@ One of the cool things with structural models is that we get to simulate counter
 
 ---
 
-# Paper 2 - Do teachers look for higher wages?
+# Paper 2 - Results
+
+**Do teachers look for higher wages?**
 
 - Teachers switching to _any_ job outside public primary schools experience a substantial _decrease_ in wages, more than 37% for low-GPA teacher graduates.
 
 - This suggests that teachers switch to occupations outside public primary schools due to other factors, e.g. working conditions
 
 
-&lt;img src="defence_slides_test_2_files/figure-html/wage-sim-1.png" width="1600px" height="400px" /&gt;
+&lt;img src="defence_slides_test_2_files/figure-html/wage-sim-1.svg" width="1300px" height="450px" /&gt;
 
 
 ---
 
 # Paper 2 - Conclusion
 
-- Teachers sort between schools in way that favors schools with high-SES students
+- Teachers sort between schools in a way that favors schools with high-SES students
 
-- "Mandatory service" in public primary schools doesn't seem promising
+- "Mandatory service" in public primary schools does not seem promising
 
-- Teachers leave public primary schools due to working conditions
+- Teachers leave public primary schools for other reasons than their salary, e.g. working conditions
 
 ---
 
@@ -563,10 +630,27 @@ One of the cool things with structural models is that we get to simulate counter
 
 
 
+
+.center2[
+
+By now, results suggest that teacher sorting exists in Denmark. But how can we make schools with low proportions of skilled teachers more attractive? 
+
+]
+
+---
+
+.center2[
+
+Maybe if we could attract teachers to live closer to these schools, and teachers needed to commute less, we could make it more attractive to work at these schools. 
+
+]
+
+
+---
 # Paper 3 - Introduction
 
 
-- In this paper i investigate what happens when *commute distance* increases for teachers, _specifically newly graduated teachers_.
+- In this paper, i investigate what happens when *commute distance* increases for teachers, _specifically newly graduated teachers_.
 
 ## Research questions
 
@@ -575,27 +659,29 @@ One of the cool things with structural models is that we get to simulate counter
 - How does the impact of decreasing school attractiveness impact schools’ ability to attract newly graduated
 skilled teachers?
 
+In this paper, the main hypothesis is that schools where teachers need to commute longer to work in, are less attractive to work in. 
+
 
 
 ---
 
-# Paper 3 - Is commute distance important?
+# Paper 3 - Previous research
 
-
+**Is commute distance important?**
 
 - Commute distance’s impact on teacher attraction has been overlooked compared to other
 factors like student body composition. 
 
-- increasing commute distance from 0 to 6 miles leads to a 19% increase in the probability of
+- Increasing commute distance from 0 to 6 miles leads to a 19% increase in the probability of
 transferring to a different school(Boyd et al., 2005a).
 
-- living within a distance of 1 mile from an average urban school, with poor working conditions, still preferable to working at an average suburban school located at least 21 miles away.(Boyd et al., 2012).
+- Living within a distance of 1 mile from an average urban school, with poor working conditions, still preferable to working at an average suburban school located at least 21 miles away.(Boyd et al., 2012).
 
 - 10 minutes commute equivalent to a reduction in yearly salary of 530$(Johnston, 2020).
 
----
+--
 
-## Why commute distance?
+**Why commute distance?**
 
 - Can help to reveal causes of geographical patterns of inequality in teacher shortages and geographical patterns of inequality in studentachievement, e.g., the rural/urban-gap in student achievement(Young, 1998; Zhang et al., 2018)
 
@@ -620,34 +706,41 @@ Other things might be effective, but not very feasible. E.g. raising average edu
 
 
 
-&lt;img src="defence_slides_test_2_files/figure-html/facet-map-1.png" width="1200px" height="400px" /&gt;
+
+&lt;img src="defence_slides_test_2_files/figure-html/facet-map-1.svg" width="1300px" height="500px" /&gt;
 
 
 
+
+
+???
+
+Use DID, a specific econemtric technique where we look at the differences before and after some event/treatment for both the intervention and control groups, and the compare the difference between these differences. 
 
 ---
 
-# Paper 3 - The closure of TTCs
+# Paper 3 - Methods
+
+- I investigate a "natural experiment" in which over 33% of danish teacher training colleges(TTC's) closed
+
+- This meant that some schools experienced an increase in the distance to the nearest TTC
 
 
-&lt;img src="defence_slides_test_2_files/figure-html/distfigures-1.png" width="1200px" height="500px" /&gt;
+&lt;img src="defence_slides_test_2_files/figure-html/distfigures-1.svg" width="1300px" height="500px" /&gt;
 
 ---
 
 
 
-# paper 3 - Hypothesis
+# Paper 3 - Hypothesis
 
 Where do teachers live before, during and after studying?
 
-A hypothetical example
 
 
 
 
----
-
-&lt;iframe src="hypo_anim.html" width="1000" height="600" scrolling="no" seamless="seamless" frameBorder="0"&gt; &lt;/iframe&gt;
+&lt;iframe src="hypo_anim.html" width="1000" height="500" scrolling="no" seamless="seamless" frameBorder="0"&gt; &lt;/iframe&gt;
 
 &lt;!-- &lt;iframe src="hypo_anim.html" width="1200" height="1000" scrolling="yes" seamless="seamless" frameBorder="0" style="width:100%; height:100%;" allowfullscreen&gt; &lt;/iframe&gt; --&gt;
 
@@ -663,9 +756,9 @@ Schools that experience an *increase in distance to nearest TC* following the cl
 
 # Paper 3 - Results
 
-## Impact on commute distance
+**Impact of closures on commute distance**
 
-- Minimum requirement, did teachers really start to commute longer to affected schools?
+- Did teachers really start to commute longer to affected schools?
 
 --
 
@@ -673,35 +766,42 @@ Schools that experience an *increase in distance to nearest TC* following the cl
 
 
 
-They did!!
+- They did!!
 
 
 &lt;table class="table table" style="width: auto !important; margin-left: auto; margin-right: auto; "&gt;
 &lt;caption&gt;&lt;span style="font-size:12px"&gt;Estimated ATT of TTC closures on the commute distance of all teachers and newly graduated teachers. Confidence intervals for the estimates are shown in parenthesis&lt;/span&gt;&lt;/caption&gt;
  &lt;thead&gt;
   &lt;tr&gt;
-   &lt;th style="text-align:left;"&gt; variable &lt;/th&gt;
-   &lt;th style="text-align:left;"&gt; estimate &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Variable &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Estimate &lt;/th&gt;
   &lt;/tr&gt;
  &lt;/thead&gt;
 &lt;tbody&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:left;width: 7cm; "&gt; commute distance &lt;/td&gt;
+   &lt;td style="text-align:left;width: 7cm; "&gt; Commute distance &lt;/td&gt;
    &lt;td style="text-align:left;width: 7cm; "&gt; 425.99
 (140.19 ; 711.8) &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:left;width: 7cm; "&gt; commute distance newly graduated teachers &lt;/td&gt;
+   &lt;td style="text-align:left;width: 7cm; "&gt; Commute distance newly graduated teachers &lt;/td&gt;
    &lt;td style="text-align:left;width: 7cm; "&gt; 1401.99
 (137.32 ; 2666.67) &lt;/td&gt;
   &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 
+
+???
+
+For schools that experienced an increase in distance to the nearest TTC, the commute distance for teachers, overall, increased by an average of 425 meters, while this increase was 1401 for newly graduated teachers
+
 ---
 
 
-# Paper 3 - Impact on teacher body composition
+# Paper 3 - Results
+
+**Impact on teacher body composition**
 
 
 &lt;table class="table" style="font-size: 14px; width: auto !important; margin-left: auto; margin-right: auto;"&gt;
@@ -755,19 +855,15 @@ They did!!
 &lt;/table&gt;
 
 
----
+???
 
-
-&lt;!-- # Results --&gt;
-
-&lt;!-- Impact on student academic performance --&gt;
-
-
-
+Basically a null result. Estimates of ATT are generally small, and even in the bounds of the CIs the effects are not very large. We can't reject that 
 
 ---
 
-# Paper 3 - Why no effect?
+# Paper 3 - Results
+
+**Why no effect?**
 
  - Did teachers commute the same distance as before closures of TTCs?
  
@@ -778,7 +874,7 @@ They did!!
 NO and NO
 
 &lt;div class="figure"&gt;
-&lt;img src="defence_slides_test_2_files/figure-html/dist-exper-cor.png" alt="commute distance and distance from residence across years since graduation. Red line represents distance from residence to TTC while black line represent commute distance. Dashed lines represent the average across the pretreatment period 1980-1985" width="6000" height="550px" /&gt;
+&lt;img src="../../../conferences and presentations/Rockwool brown bag 2024/figures/dist-exper-cor.png" alt="commute distance and distance from residence across years since graduation. Red line represents distance from residence to TTC while black line represent commute distance. Dashed lines represent the average across the pretreatment period 1980-1985" width="6000" height="550px" /&gt;
 &lt;p class="caption"&gt;commute distance and distance from residence across years since graduation. Red line represents distance from residence to TTC while black line represent commute distance. Dashed lines represent the average across the pretreatment period 1980-1985&lt;/p&gt;
 &lt;/div&gt;
 
@@ -794,7 +890,7 @@ NO and NO
 
 ---
 
-# Paper 3 - conclusion
+# Paper 3 - Conclusion
 
 - Results show that commute distance likely has a lower impact on school attractiveness than theory and empirical results suggest.
 
@@ -808,20 +904,26 @@ in distribution of teachers.
 
 
 
-# Discussion - What is a good teacher? 
-
-- Is GPA a good measure of teacher quality?
+# Grand discussion - Is GPA a good measure of teacher quality?
 
 - Evidence is somewhat mixed
 
 - However, teachers' experience is consistently one of the best predictors of teacher effectiveness(Bacher-Hicks&amp;Koedel, 2023; Coenen et al, 2018)
 
-- We might look at results from Coenen et al, 2018, a systematic review on the association between teacher characteristics and teacher effectiveness.
+- We might look at results from Coenen et al, 2018, a systematic review on the association between teacher characteristics and teacher effectiveness
 
-- we may compare the _association between teachers' college level academic achievement(e.g. licensure test scores, GPA etc.) and teacher effectiveness_ to the _association between teacher experience and teacher effectiveness_. 
+- We may compare the _association between teachers' college level academic achievement(e.g. licensure test scores, GPA etc.) and teacher effectiveness_ to the _association between teacher experience and teacher effectiveness_
 
 
 ---
+# Grand discussion - Is GPA a good measure of teacher quality?
+
+
+
+
+
+
+.right-column3[
 
 
 
@@ -829,9 +931,12 @@ in distribution of teachers.
 
 
 
-.right-column2[
+&lt;table class="kable_wrapper"&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td&gt; 
 
-&lt;table class=" lightable-classic" style="font-size: 10px; font-family: serif; width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+&lt;table class=" lightable-classic" style="font-size: 14.5px; font-family: serif; width: auto !important; float: left; margin-right: 10px;"&gt;
 &lt;caption style="font-size: initial !important;"&gt;Association between experience and teacher effectiveness&lt;/caption&gt;
  &lt;thead&gt;
   &lt;tr&gt;
@@ -843,159 +948,156 @@ in distribution of teachers.
  &lt;/thead&gt;
 &lt;tbody&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:left;border-bottom: none;vertical-align: middle !important;" rowspan="17"&gt; math &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; Nye et al. (2004) &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; 0.189 &lt;/td&gt;
-   &lt;td style="text-align:right;border-bottom: none;vertical-align: middle !important;" rowspan="17"&gt; 0.11 &lt;/td&gt;
+   &lt;td style="text-align:left;padding: 0pxborder-bottom: none;vertical-align: middle !important;" rowspan="17"&gt; math &lt;/td&gt;
+   &lt;td style="text-align:left;padding: 0px"&gt; Nye et al. (2004) &lt;/td&gt;
+   &lt;td style="text-align:left;padding: 0px"&gt; 0.189 &lt;/td&gt;
+   &lt;td style="text-align:right;padding: 0pxborder-bottom: none;vertical-align: middle !important;" rowspan="17"&gt; 0.11 &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
    
-   &lt;td style="text-align:left;"&gt; Ladd and Sorensen (2015b) &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; 0.185 &lt;/td&gt;
-   
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   
-   &lt;td style="text-align:left;"&gt; Rockoff (2004) &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; 0.18 &lt;/td&gt;
+   &lt;td style="text-align:left;padding: 0px"&gt; Ladd and Sorensen (2015b) &lt;/td&gt;
+   &lt;td style="text-align:left;padding: 0px"&gt; 0.185 &lt;/td&gt;
    
   &lt;/tr&gt;
   &lt;tr&gt;
    
-   &lt;td style="text-align:left;"&gt; Harris and Sass (2011) &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; 0.16 &lt;/td&gt;
+   &lt;td style="text-align:left;padding: 0px"&gt; Rockoff (2004) &lt;/td&gt;
+   &lt;td style="text-align:left;padding: 0px"&gt; 0.18 &lt;/td&gt;
    
   &lt;/tr&gt;
   &lt;tr&gt;
    
-   &lt;td style="text-align:left;"&gt; Papay and Kraft (2015) &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; 0.132 &lt;/td&gt;
+   &lt;td style="text-align:left;padding: 0px"&gt; Harris and Sass (2011) &lt;/td&gt;
+   &lt;td style="text-align:left;padding: 0px"&gt; 0.16 &lt;/td&gt;
    
   &lt;/tr&gt;
   &lt;tr&gt;
    
-   &lt;td style="text-align:left;"&gt; Clotfelter et al. (2006) &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; 0.1 &lt;/td&gt;
+   &lt;td style="text-align:left;padding: 0px"&gt; Papay and Kraft (2015) &lt;/td&gt;
+   &lt;td style="text-align:left;padding: 0px"&gt; 0.132 &lt;/td&gt;
    
   &lt;/tr&gt;
   &lt;tr&gt;
    
-   &lt;td style="text-align:left;"&gt; Clotfelter et al. (2007) &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; 0.092 &lt;/td&gt;
+   &lt;td style="text-align:left;padding: 0px"&gt; Clotfelter et al. (2006) &lt;/td&gt;
+   &lt;td style="text-align:left;padding: 0px"&gt; 0.1 &lt;/td&gt;
    
   &lt;/tr&gt;
   &lt;tr&gt;
    
-   &lt;td style="text-align:left;"&gt; Boyd et al. (2006) &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; 0.076 &lt;/td&gt;
+   &lt;td style="text-align:left;padding: 0px"&gt; Clotfelter et al. (2007) &lt;/td&gt;
+   &lt;td style="text-align:left;padding: 0px"&gt; 0.092 &lt;/td&gt;
    
   &lt;/tr&gt;
   &lt;tr&gt;
    
-   &lt;td style="text-align:left;"&gt; Boyd et al. (2008) &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; 0.06 &lt;/td&gt;
+   &lt;td style="text-align:left;padding: 0px"&gt; Boyd et al. (2006) &lt;/td&gt;
+   &lt;td style="text-align:left;padding: 0px"&gt; 0.076 &lt;/td&gt;
    
   &lt;/tr&gt;
   &lt;tr&gt;
    
-   &lt;td style="text-align:left;"&gt; Croninger et al. (2007) &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; 0.055 &lt;/td&gt;
+   &lt;td style="text-align:left;padding: 0px"&gt; Boyd et al. (2008) &lt;/td&gt;
+   &lt;td style="text-align:left;padding: 0px"&gt; 0.06 &lt;/td&gt;
    
   &lt;/tr&gt;
   &lt;tr&gt;
    
-   &lt;td style="text-align:left;"&gt; Jepsen (2005) &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; 0.021 &lt;/td&gt;
+   &lt;td style="text-align:left;padding: 0px"&gt; Croninger et al. (2007) &lt;/td&gt;
+   &lt;td style="text-align:left;padding: 0px"&gt; 0.055 &lt;/td&gt;
    
   &lt;/tr&gt;
   &lt;tr&gt;
    
-   &lt;td style="text-align:left;"&gt; Kukla-Acevedo (2009) &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; NS &lt;/td&gt;
+   &lt;td style="text-align:left;padding: 0px"&gt; Jepsen (2005) &lt;/td&gt;
+   &lt;td style="text-align:left;padding: 0px"&gt; 0.021 &lt;/td&gt;
    
   &lt;/tr&gt;
   &lt;tr&gt;
    
-   &lt;td style="text-align:left;"&gt; Aaronson et al. (2007) &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; NS &lt;/td&gt;
+   &lt;td style="text-align:left;padding: 0px"&gt; Kukla-Acevedo (2009) &lt;/td&gt;
+   &lt;td style="text-align:left;padding: 0px"&gt; NS &lt;/td&gt;
    
   &lt;/tr&gt;
   &lt;tr&gt;
    
-   &lt;td style="text-align:left;"&gt; Goldhaber and Brewer (2000) &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; NS &lt;/td&gt;
+   &lt;td style="text-align:left;padding: 0px"&gt; Aaronson et al. (2007) &lt;/td&gt;
+   &lt;td style="text-align:left;padding: 0px"&gt; NS &lt;/td&gt;
    
   &lt;/tr&gt;
   &lt;tr&gt;
    
-   &lt;td style="text-align:left;"&gt; Monk (1994) &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; NS &lt;/td&gt;
+   &lt;td style="text-align:left;padding: 0px"&gt; Goldhaber and Brewer (2000) &lt;/td&gt;
+   &lt;td style="text-align:left;padding: 0px"&gt; NS &lt;/td&gt;
    
   &lt;/tr&gt;
   &lt;tr&gt;
    
-   &lt;td style="text-align:left;"&gt; Betts et al. (2003) &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; NS &lt;/td&gt;
+   &lt;td style="text-align:left;padding: 0px"&gt; Monk (1994) &lt;/td&gt;
+   &lt;td style="text-align:left;padding: 0px"&gt; NS &lt;/td&gt;
    
   &lt;/tr&gt;
   &lt;tr&gt;
    
-   &lt;td style="text-align:left;border-bottom: 2px solid black;"&gt; Goldhaber and Brewer (1996) &lt;/td&gt;
-   &lt;td style="text-align:left;border-bottom: 2px solid black;"&gt; NS &lt;/td&gt;
-   
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;border-bottom: none;vertical-align: middle !important;" rowspan="7"&gt; reading &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; Nye et al. (2004) &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; 0.142 &lt;/td&gt;
-   &lt;td style="text-align:right;border-bottom: none;vertical-align: middle !important;" rowspan="7"&gt; 0.08 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   
-   &lt;td style="text-align:left;"&gt; Clotfelter et al. (2007) &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; 0.118 &lt;/td&gt;
+   &lt;td style="text-align:left;padding: 0px"&gt; Betts et al. (2003) &lt;/td&gt;
+   &lt;td style="text-align:left;padding: 0px"&gt; NS &lt;/td&gt;
    
   &lt;/tr&gt;
   &lt;tr&gt;
    
-   &lt;td style="text-align:left;"&gt; Clotfelter et al. (2006) &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; 0.08 &lt;/td&gt;
+   &lt;td style="text-align:left;border-bottom: 2px solid black;padding: 0px"&gt; Goldhaber and Brewer (1996) &lt;/td&gt;
+   &lt;td style="text-align:left;border-bottom: 2px solid black;padding: 0px"&gt; NS &lt;/td&gt;
+   
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;padding: 0pxborder-bottom: none;vertical-align: middle !important;" rowspan="7"&gt; reading &lt;/td&gt;
+   &lt;td style="text-align:left;padding: 0px"&gt; Nye et al. (2004) &lt;/td&gt;
+   &lt;td style="text-align:left;padding: 0px"&gt; 0.142 &lt;/td&gt;
+   &lt;td style="text-align:right;padding: 0pxborder-bottom: none;vertical-align: middle !important;" rowspan="7"&gt; 0.08 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;padding: 0px"&gt; Clotfelter et al. (2007) &lt;/td&gt;
+   &lt;td style="text-align:left;padding: 0px"&gt; 0.118 &lt;/td&gt;
    
   &lt;/tr&gt;
   &lt;tr&gt;
    
-   &lt;td style="text-align:left;"&gt; Papay and Kraft (2015) &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; 0.058 &lt;/td&gt;
+   &lt;td style="text-align:left;padding: 0px"&gt; Clotfelter et al. (2006) &lt;/td&gt;
+   &lt;td style="text-align:left;padding: 0px"&gt; 0.08 &lt;/td&gt;
    
   &lt;/tr&gt;
   &lt;tr&gt;
    
-   &lt;td style="text-align:left;"&gt; Jepsen (2005) &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; 0.02 &lt;/td&gt;
+   &lt;td style="text-align:left;padding: 0px"&gt; Papay and Kraft (2015) &lt;/td&gt;
+   &lt;td style="text-align:left;padding: 0px"&gt; 0.058 &lt;/td&gt;
    
   &lt;/tr&gt;
   &lt;tr&gt;
    
-   &lt;td style="text-align:left;"&gt; Hanushek (1992) &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; NS &lt;/td&gt;
+   &lt;td style="text-align:left;padding: 0px"&gt; Jepsen (2005) &lt;/td&gt;
+   &lt;td style="text-align:left;padding: 0px"&gt; 0.02 &lt;/td&gt;
    
   &lt;/tr&gt;
   &lt;tr&gt;
    
-   &lt;td style="text-align:left;"&gt; Muñoz and Chang (2007) &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; NS &lt;/td&gt;
+   &lt;td style="text-align:left;padding: 0px"&gt; Hanushek (1992) &lt;/td&gt;
+   &lt;td style="text-align:left;padding: 0px"&gt; NS &lt;/td&gt;
+   
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;padding: 0px"&gt; Muñoz and Chang (2007) &lt;/td&gt;
+   &lt;td style="text-align:left;padding: 0px"&gt; NS &lt;/td&gt;
    
   &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 
+ &lt;/td&gt;
+   &lt;td&gt; 
 
-]
-
-.left-column2[
-
-
-&lt;table class=" lightable-classic" style="font-size: 10px; font-family: serif; width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+&lt;table class=" lightable-classic" style="font-size: 14.5px; font-family: serif; width: auto !important; float: right; margin-left: 10px;"&gt;
 &lt;caption style="font-size: initial !important;"&gt;Association between teacher licensure test scores and teacher effectiveness&lt;/caption&gt;
  &lt;thead&gt;
   &lt;tr&gt;
@@ -1007,100 +1109,115 @@ in distribution of teachers.
  &lt;/thead&gt;
 &lt;tbody&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:left;border-bottom: none;vertical-align: middle !important;" rowspan="10"&gt; math &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; Coenen et al. (2014) &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; 0.198 &lt;/td&gt;
-   &lt;td style="text-align:right;border-bottom: none;vertical-align: middle !important;" rowspan="10"&gt; 0.06 &lt;/td&gt;
+   &lt;td style="text-align:left;padding: 0pxborder-bottom: none;vertical-align: middle !important;" rowspan="10"&gt; math &lt;/td&gt;
+   &lt;td style="text-align:left;padding: 0px"&gt; Coenen et al. (2014) &lt;/td&gt;
+   &lt;td style="text-align:left;padding: 0px"&gt; 0.198 &lt;/td&gt;
+   &lt;td style="text-align:right;padding: 0pxborder-bottom: none;vertical-align: middle !important;" rowspan="10"&gt; 0.06 &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
    
-   &lt;td style="text-align:left;"&gt; Metzler and Woessmann (2012) &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; 0.087 &lt;/td&gt;
-   
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   
-   &lt;td style="text-align:left;"&gt; Clotfelter et al. (2010) &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; 0.047 &lt;/td&gt;
+   &lt;td style="text-align:left;padding: 0px"&gt; Metzler and Woessmann (2012) &lt;/td&gt;
+   &lt;td style="text-align:left;padding: 0px"&gt; 0.087 &lt;/td&gt;
    
   &lt;/tr&gt;
   &lt;tr&gt;
    
-   &lt;td style="text-align:left;"&gt; Boyd et al. (2008) &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; 0.041 &lt;/td&gt;
+   &lt;td style="text-align:left;padding: 0px"&gt; Clotfelter et al. (2010) &lt;/td&gt;
+   &lt;td style="text-align:left;padding: 0px"&gt; 0.047 &lt;/td&gt;
    
   &lt;/tr&gt;
   &lt;tr&gt;
    
-   &lt;td style="text-align:left;"&gt; Kukla-Acevedo (2009) &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; 0.034 &lt;/td&gt;
+   &lt;td style="text-align:left;padding: 0px"&gt; Boyd et al. (2008) &lt;/td&gt;
+   &lt;td style="text-align:left;padding: 0px"&gt; 0.041 &lt;/td&gt;
    
   &lt;/tr&gt;
   &lt;tr&gt;
    
-   &lt;td style="text-align:left;"&gt; Rowan et al. (1997) &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; 0.02 &lt;/td&gt;
+   &lt;td style="text-align:left;padding: 0px"&gt; Kukla-Acevedo (2009) &lt;/td&gt;
+   &lt;td style="text-align:left;padding: 0px"&gt; 0.034 &lt;/td&gt;
    
   &lt;/tr&gt;
   &lt;tr&gt;
    
-   &lt;td style="text-align:left;"&gt; Clotfelter et al. (2007) &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; 0.015 &lt;/td&gt;
+   &lt;td style="text-align:left;padding: 0px"&gt; Rowan et al. (1997) &lt;/td&gt;
+   &lt;td style="text-align:left;padding: 0px"&gt; 0.02 &lt;/td&gt;
    
   &lt;/tr&gt;
   &lt;tr&gt;
    
-   &lt;td style="text-align:left;"&gt; Clotfelter et al. (2006) &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; 0.012 &lt;/td&gt;
+   &lt;td style="text-align:left;padding: 0px"&gt; Clotfelter et al. (2007) &lt;/td&gt;
+   &lt;td style="text-align:left;padding: 0px"&gt; 0.015 &lt;/td&gt;
    
   &lt;/tr&gt;
   &lt;tr&gt;
    
-   &lt;td style="text-align:left;"&gt; Hill et al. (2005) &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; NS &lt;/td&gt;
+   &lt;td style="text-align:left;padding: 0px"&gt; Clotfelter et al. (2006) &lt;/td&gt;
+   &lt;td style="text-align:left;padding: 0px"&gt; 0.012 &lt;/td&gt;
    
   &lt;/tr&gt;
   &lt;tr&gt;
    
-   &lt;td style="text-align:left;border-bottom: 2px solid black;"&gt; Mullens et al. (1996) &lt;/td&gt;
-   &lt;td style="text-align:left;border-bottom: 2px solid black;"&gt; NS &lt;/td&gt;
-   
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;border-bottom: none;vertical-align: middle !important;" rowspan="5"&gt; reading &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; Clotfelter et al. (2007) &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; 0.015 &lt;/td&gt;
-   &lt;td style="text-align:right;border-bottom: none;vertical-align: middle !important;" rowspan="5"&gt; 0.01 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   
-   &lt;td style="text-align:left;"&gt; Hanushek (1992) &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; NS &lt;/td&gt;
+   &lt;td style="text-align:left;padding: 0px"&gt; Hill et al. (2005) &lt;/td&gt;
+   &lt;td style="text-align:left;padding: 0px"&gt; NS &lt;/td&gt;
    
   &lt;/tr&gt;
   &lt;tr&gt;
    
-   &lt;td style="text-align:left;"&gt; Metzler and Woessmann (2012) &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; NS &lt;/td&gt;
+   &lt;td style="text-align:left;border-bottom: 2px solid black;padding: 0px"&gt; Mullens et al. (1996) &lt;/td&gt;
+   &lt;td style="text-align:left;border-bottom: 2px solid black;padding: 0px"&gt; NS &lt;/td&gt;
+   
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;padding: 0pxborder-bottom: none;vertical-align: middle !important;" rowspan="5"&gt; reading &lt;/td&gt;
+   &lt;td style="text-align:left;padding: 0px"&gt; Clotfelter et al. (2007) &lt;/td&gt;
+   &lt;td style="text-align:left;padding: 0px"&gt; 0.015 &lt;/td&gt;
+   &lt;td style="text-align:right;padding: 0pxborder-bottom: none;vertical-align: middle !important;" rowspan="5"&gt; 0.01 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;padding: 0px"&gt; Hanushek (1992) &lt;/td&gt;
+   &lt;td style="text-align:left;padding: 0px"&gt; NS &lt;/td&gt;
    
   &lt;/tr&gt;
   &lt;tr&gt;
    
-   &lt;td style="text-align:left;"&gt; Clotfelter et al. (2006) &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; NS &lt;/td&gt;
+   &lt;td style="text-align:left;padding: 0px"&gt; Metzler and Woessmann (2012) &lt;/td&gt;
+   &lt;td style="text-align:left;padding: 0px"&gt; NS &lt;/td&gt;
    
   &lt;/tr&gt;
   &lt;tr&gt;
    
-   &lt;td style="text-align:left;"&gt; Coenen et al. (2014) &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; NS &lt;/td&gt;
+   &lt;td style="text-align:left;padding: 0px"&gt; Clotfelter et al. (2006) &lt;/td&gt;
+   &lt;td style="text-align:left;padding: 0px"&gt; NS &lt;/td&gt;
+   
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   
+   &lt;td style="text-align:left;padding: 0px"&gt; Coenen et al. (2014) &lt;/td&gt;
+   &lt;td style="text-align:left;padding: 0px"&gt; NS &lt;/td&gt;
    
   &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 
+ &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+
 
 ]
+
+
+.left-column3[
+
+
+
+
+
+
 
 - Association for experience is about twice as large for math and much larger for reading
 
@@ -1108,9 +1225,23 @@ in distribution of teachers.
 
 - Teachers with high GPA may "replace" moderately experienced teachers
 
-- None of the associations are very strong. It is generally hard to find teacher characteristics that strongly predict teacher effectiveness.
+- None of the associations are very strong.
+
+
+
+
+
+]
+
+
+
+
+
+
 
 ---
+
+# Grand discussion - Is GPA a good measure of teacher quality?
 
 - But being a "a good teacher" is more complex than raising childrens academic achievement. It is hard to raise students' academic achievement, if you first need to convince them that showing up in class is worth their time.
 
@@ -1150,22 +1281,24 @@ In the future i hope to link admin data and survey data, e.g. PISA, TALIS and TI
 
 ---
 
-# Discussion - What about other types of segregation?
+# Grand discussion - What about other types of segregation?
 
 - How does teacher sorting connect more broadly to social stratification? 
 
 - Maybe we can place teacher sorting into the "Wisconsin model" of occupational attainment(Sewell &amp; Haller &amp; Portes, 1969)
 
 ---
-# Discussion - Wisconsin model
+# Grand discussion - What about other types of segregation?
 
-
+The Wisconsin model
 
 &lt;img src="defence_slides_test_2_files/figure-html/wis-model-1.png" width="1300px" height="480px" /&gt;
 
 ---
 
-# Discussion - Wisconsin model + teacher sorting
+# Grand discussion - What about other types of segregation?
+
+Wisconsin model + teacher sorting
 
 
 &lt;img src="defence_slides_test_2_files/figure-html/wis-model-exp-1.png" width="1300px" height="480px" /&gt;
@@ -1186,9 +1319,9 @@ In the future i hope to link admin data and survey data, e.g. PISA, TALIS and TI
 
 # Grand conclusion
 
-- If it is a race, then the race is rigged. Students don't choose their own conditions for learning, neither with regards to their home or the school that they attend. Noone can fault teachers for wanting to work in schools with a rough working environment. Choosing not to provide better conditions for students and teachers, is a choice we make as a society however.
-
-- Remember that thing i left out in the beginning? Papers 1 and 2 show us that teachers are sorted already by the first year. The early career of teachers lays the tracks for the rest of the career.
+- If it is a race, then the race is rigged
+  - Teachers are sorted from the beginning of their careers, and the sorting persists throughout their career
+  - Teacher sorting exists in DK as well, despite low social inequality in DK
 
 
 - policy implications
@@ -1202,6 +1335,16 @@ In the future i hope to link admin data and survey data, e.g. PISA, TALIS and TI
   - Mentoring
   
   - Co-teaching to improve working environments
+  
+
+
+???
+
+Race is rigged - Students don't choose their own conditions for learning, neither with regards to their home or the school that they attend. Noone can fault teachers for wanting to work in schools with a rough working environment. Choosing not to provide better conditions for students and teachers, is a choice we make as a society however.
+
+Remember that thing i left out in the beginning? Papers 1 and 2 show us that teachers are sorted already by the first year. The early career of teachers lays the tracks for the rest of the career.
+
+Results in papers 1 and 2 can maybe help explain why mentoring is effective at teacher retention
 
 
 
@@ -1211,39 +1354,42 @@ In the future i hope to link admin data and survey data, e.g. PISA, TALIS and TI
 # Appendix
 
 ---
-
 ## Transition matrix
 
-&lt;img src="../../mantle/trans_mat_annotate.jpg" width="1608" height="480px" /&gt;
+
+&lt;img src="defence_slides_test_2_files/figure-html/trans-mat-1.png" width="1400px" height="550px" /&gt;
 
 ---
 
 ## Teacher quality gap
 
 
-&lt;img src="defence_slides_test_2_files/figure-html/quality-gap-plot-1.png" height="480px" /&gt;
+&lt;img src="defence_slides_test_2_files/figure-html/quality-gap-plot-1.svg" width="1062px" height="600px" /&gt;
+
+---
+
+# Paper 1 - Clusters across cohorts
+
+
+
+&lt;img src="defence_slides_test_2_files/figure-html/cluster-seq-plot-cohort-1.svg" width="1300px" height="600px" /&gt;
 
 
 
 ---
 
 
-## Commute distance impact on job search radius
-
-
----
 
 class: full-slide-fig
 
 # Paper 3 - How did changes in teacher mobility matter?
 
---
 
 
 
-How were schools "covered" by the mean job search radius(commute distance to school+distance from residence to nearest TC) before the closure of TCs?
+How were schools "covered" by the mean job search radius before the closure of TCs?
 
-&lt;img src="defence_slides_test_2_files/figure-html/job-search-map-plots-1.png" width="1100px" height="500px" /&gt;
+&lt;img src="defence_slides_test_2_files/figure-html/job-search-map-plots-1.svg" width="1100px" height="500px" /&gt;
 
 ---
 
@@ -1255,7 +1401,7 @@ class: full-slide-fig
 
 What would have happened if TCs closed and teachers did not change their mobility behaviour?
 
-&lt;img src="defence_slides_test_2_files/figure-html/after-close-unchanged-1.png" width="1100px" height="500px" /&gt;
+&lt;img src="defence_slides_test_2_files/figure-html/after-close-unchanged-1.svg" width="1100px" height="500px" /&gt;
 
 ---
 
@@ -1268,7 +1414,7 @@ class: full-slide-fig
 What actually happened when TCs closed and teachers changed their mobility behaviour?
 
 
-&lt;img src="defence_slides_test_2_files/figure-html/after-close-changed-1.png" width="1100px" height="500px" /&gt;
+&lt;img src="defence_slides_test_2_files/figure-html/after-close-changed-1.svg" width="1100px" height="500px" /&gt;
 
 
 
@@ -1303,7 +1449,7 @@ class: full-slide-fig
 
 
 
-&lt;img src="defence_slides_test_2_files/figure-html/dist-thresh-fig-tchr-1.png" width="1100px" height="500px" /&gt;
+&lt;img src="defence_slides_test_2_files/figure-html/dist-thresh-fig-tchr-1.svg" width="1100px" height="550px" /&gt;
 
 
 
